@@ -37,3 +37,12 @@ docker volume create my-vol
 or by any other way you make/mount a volue to docker.
 
 You can then access from a browser at http://localhost:8080
+
+## Some asides
+The current image builds from latest alpine and the lastest released version of elog. In time I will pin down versions so that the docker is stable against changes in the dependancies.
+
+There are also issues with the way the Dockerfile is composed that mean that build files are not removed in the same layer in which they are created.  This blows out the size of the image.  
+
+v0beta Docker doesn't currently support SSL
+
+v0beta Docker is a bare bones implantation without imagemagick or ckeditor. These will come later.
