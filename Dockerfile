@@ -30,4 +30,5 @@ RUN adduser -S -g elog elog && \
     chown elog:elog elogd.cfg && \
     chown -R elog:elog logbooks
 
+
 CMD ["/usr/local/sbin/elogd", "-p", "8080", "-c", "/home/elogd.cfg"]
