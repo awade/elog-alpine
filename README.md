@@ -1,6 +1,12 @@
 # elog-alpine
 Implementation of The Elog in an Alpine based docker.
 
+This Dockerfile creates a docker image of an elog server (https://midas.psi.ch/elog/) built on Alpine linux (https://alpinelinux.org/).
+
+The idea is to build the lightest possible deployment so that it may be run on a lab computer with many other common tools: i.e. to have the least possible overhead.
+
+A number of other docker builds use Ubuntu and Debian, and, therefore contain a lot of unnecessary stuff. This is an attempt to make it as small as possible with all config and data stored in an mounted volume external to the container.
+
 ## Building the docker image locally
 Pull docker from github with
 ```
