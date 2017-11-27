@@ -12,7 +12,7 @@ ADD . /builddir
 EXPOSE 8080
 
 RUN apk update -q && \
-    apk add --no-cache openssl-dev && \
+    apk add --no-cache openssl-dev imagemagick && \
     apk add --no-cache --virtual .build-deps build-base git && \
     git clone https://bitbucket.org/ritt/elog --recursive && \
     cd /builddir/elog && \
