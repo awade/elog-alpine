@@ -24,11 +24,11 @@ RUN apk update -q && \
 # Adding users and config files from build folder
 COPY ./elogd.cfg /usr/local/elog/elogd.cfg
 
+# This block only modifies permissions for non-mounted versions
 RUN adduser -S -g elog elog && \
     addgroup -S elog && \
     cd /usr/local/elog/ && \
     chown elog:elog elogd.cfg && \
     chown -R elog:elog logbooks
-
 
 CMD ["/usr/local/sbin/elogd", "-p", "8080", "-c", "/home/elogd.cfg"]
